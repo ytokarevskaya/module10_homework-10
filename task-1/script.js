@@ -7,11 +7,11 @@ MyNumber.prototype.isNumber = function() {
 }
 
 MyNumber.prototype.isOdd = function() {
-  return this.isNumber() && this.value%2 === 0;
+  return this.isNumber() && this.value%2 !== 0;
 }
 
 MyNumber.prototype.isEven = function() {
-  return this.isNumber() && this.value%2 !== 0;
+  return this.isNumber() && this.value%2 === 0;
 }
 
 const value = prompt('Введите значение: ');
@@ -19,11 +19,11 @@ const input = new MyNumber(value);
 
 switch (true) {
   case input.isEven(): {
-    console.info('Нечетное');
+    console.info('Четное');
     break;
   }
   case input.isOdd(): {
-    console.info('Четное');
+    console.info('Нечетное');
     break;
   }
   default: {
