@@ -23,16 +23,15 @@ arr.forEach(item => {
     case !isNumber(item): {
       return true;
     }
-    case item === 0: {
-      ++result.zero;
-      return true;
-    }
     case isOdd(item): {
       ++result.odd;
       return true;
     }
     case isEven(item): {
       ++result.even;
+      if(item === 0) {
+        ++result.zero;  
+      }
       return true;
     }
   }
