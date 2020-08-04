@@ -28,9 +28,10 @@ arr.forEach(item => {
       return true;
     }
     case isEven(item): {
-      ++result.even;
       if(item === 0) {
         ++result.zero;  
+      } else {
+        ++result.even;
       }
       return true;
     }
@@ -40,3 +41,5 @@ arr.forEach(item => {
 console.info(`четных: ${result.even}`);
 console.info(`нечетных: ${result.odd}`);
 console.info(`нулевых: ${result.zero}`);
+
+// Всё верно, но есть небольшая неточность: нули должны учитываться отдельно (т.е. они не прибавляются к четным элементам). Выше исправила на правильный вариант.

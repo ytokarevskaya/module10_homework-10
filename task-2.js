@@ -1,12 +1,12 @@
 function getType(value) {
-  switch (true) {
-    case typeof value === 'number': {
+  switch (typeof value) {
+    case 'number': {
       return 'Число';
     }
-    case typeof value === 'string': {
+    case 'string': {
       return 'Строка';
     }
-    case typeof value === 'boolean': {
+    case 'boolean': {
       return 'Логический тип';
     }
     default: {
@@ -23,3 +23,5 @@ console.info(getType({}));
 console.info(getType([]));
 console.info(getType(null));
 console.info(getType(undefined));
+
+// Задача решена верно, но более правильно было бы использовать оператор switch так, как я исправила выше
